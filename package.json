@@ -1,7 +1,7 @@
 {
     "name": "feder-atom-highlight",
     "version": "1.2.0",
-    "description": "Support syntax highlight for Feder",
+    "description": "Highlight Feder source code",
     "engines": {
         "atom": "*"
     },
