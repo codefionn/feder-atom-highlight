@@ -1,0 +1,17 @@
+{
+    "name": "feder-atom-highlight",
+    "version": "1.0.0",
+    "description": "Support syntax highlight for Feder",
+    "engines": {
+        "atom": "*"
+    },
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/codefionn/feder-atom-highlight.git"
+    },
+    "bugs": {
+        "url": "https://github.com/codefionn/feder-atom-highlight/issues"
+    },
+    "license": "zlib"
+}

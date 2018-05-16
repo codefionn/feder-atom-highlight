@@ -1,0 +1,102 @@
+'scopeName': 'source.feder'
+'name': 'Feder'
+'fileTypes': ['fd','feder']
+
+'patterns': [
+  {
+    'match': '[+-]{0,1}\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    'name': 'constant.numeric.feder'
+  }
+  # Function
+  {
+    'match': '\\b(func)\\s+(\\w+)'
+    'captures':
+      '1':
+        'name': 'keyword.control.feder'
+      '2':
+        'name': 'entity.name.function.feder'
+    'name': 'meta.function.feder'
+  }
+  # Interface
+  {
+    'match': '\\b(interface)\\s+(\\w+)'
+    'captures':
+      '1':
+        'name': 'keyword.control.feder'
+      '2':
+        'name': 'entity.name.function.feder'
+    'name': 'meta.function.feder'
+  }
+  # Class
+  {
+    'match': '\\b(class)\\s+(\\w+)\\s*$'
+    'captures':
+      '1':
+        'name': 'keyword.control.feder'
+      '2':
+        'name': 'entity.name.function.feder'
+      'name': 'meta.type.feder'
+  }
+  # Type (primitive data type)
+  {
+    'match': '\\b(type)\\s+(\\w+)\\s*$'
+    'captures':
+      '1':
+        'name': 'keyword.control.feder'
+      '2':
+        'name': 'entity.name.function.feder'
+      'name': 'meta.type.feder'
+  }
+  # Namespace
+  {
+    'match': '\\b(namespace)\\s+(\\w+)\\s*$'
+    'captures':
+      '1':
+        'name': 'keyword.control.feder'
+      '2':
+        'name': 'entity.name.section.feder'
+    'name': 'meta.section.feder'
+  }
+  # Strings
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.triple.feder'
+  }
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.quoted.single.feder'
+  }
+  # Comments
+  {
+    'begin': '##'
+    'end': '##'
+    'name': 'comment.block.feder'
+  }
+  {
+    'match:': '#.*$'
+    'name': 'comment.line.number-sign.feder'
+  }
+  {
+    'match': 'else'
+    'name': 'invalid.deprecated.feder'
+  }
+  # Keywords (while is not included, because it's deprecated)
+  {
+    'match': '(\\b(for|if|else|from|global|return|continue|break|include)\\b)'
+    'name': 'keyword.control.feder'
+  }
+  {
+    'match': '[[:alnum:]_]+'
+  }
+  # Constants
+  {
+    'match': '(\\b(true|false|null)\\b)'
+    'name': 'constant.language.feder'
+  }
+  {
+    'match': '\\&\\&|\\|\\|'
+    'name': 'keyword.control.operator'
+  }
+]
